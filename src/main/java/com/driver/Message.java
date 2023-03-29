@@ -1,7 +1,5 @@
 package com.driver;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Message {
@@ -9,23 +7,33 @@ public class Message {
     private String content;
     private Date timestamp;
 
-    WhatsappRepository whatsappRepository = new WhatsappRepository();
-
-    public Message(int id, String content, Date timestamp) {
+    public Message(int id, String content) {
         this.id = id;
         this.content = content;
-        this.timestamp = timestamp;
+        this.timestamp = new Date();
     }
 
-    public Message(String content) {
-        whatsappRepository.setMessageId(whatsappRepository.getMessageId()+1);
+    public int getId() {
+        return id;
+    }
 
-        this.id = whatsappRepository.getMessageId();
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
         this.content = content;
+    }
 
-        DateFormat dFor = new SimpleDateFormat("dd/MM/yy");
-        this.timestamp = new Date();
-        dFor.format(timestamp);
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
     }
 }

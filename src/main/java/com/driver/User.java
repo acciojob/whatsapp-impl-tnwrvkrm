@@ -4,8 +4,6 @@ public class User {
     private String name;
     private String mobile;
 
-    WhatsappRepository whatsappRepository = new WhatsappRepository();
-
     public User(String name, String mobile) {
         this.name = name;
         this.mobile = mobile;
@@ -25,13 +23,5 @@ public class User {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
-    }
-
-    public WhatsappRepository getWhatsappRepository() {
-        return whatsappRepository;
-    }
-
-    public void setWhatsappRepository(WhatsappRepository whatsappRepository) {
-        this.whatsappRepository = whatsappRepository;
     }
 }
