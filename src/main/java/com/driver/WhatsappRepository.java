@@ -152,7 +152,7 @@ public class WhatsappRepository {
             throw new Exception("User is not a participant");
         }
 
-        groupUserMap.get(myGroup).remove(getUser(user, group));
+        groupUserMap.get(myGroup).remove(user);
         groupUserMap.get(myGroup).add(0,user);
         adminMap.put(myGroup,user);
     }

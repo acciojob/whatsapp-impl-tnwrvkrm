@@ -34,7 +34,7 @@ public class WhatsappService {
     //5
     public String changeAdmin(User approver, User user, Group group) throws Exception{
         repository.changeAdmin(approver, user, group);
-        return null;
+        return "SUCCESS";
     }
 
     //6
